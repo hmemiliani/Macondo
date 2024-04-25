@@ -1,9 +1,3 @@
-function kFormatter(num){
-    if(num > 999999){
-        return Math.abs(num) > 999999 ? Math.sign(num)*((Math.abs(num)/1000000).toFixed(1))+'00.000':Math.sign(num)*Math.abs(num);
-    } else if(num > 999)
-        return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1))+'.000':Math.sign(num)*Math.abs(num);
-}
 
 //Caso-1 ------------------------------------------------------------
 
@@ -13,7 +7,7 @@ alert("Sales de trabajar el dia viernes y tienes un vuelo en la noche, tiene esc
 
 let opcComfirm = false;
 let dineroDisponible = 2500000;
-alert(`Te llego una consignacion de ${kFormatter(dineroDisponible)}`);
+alert(`Te llego una consignacion de ${dineroDisponible}`);
 
 alert("Llegas al aeropuerto con suficiente tiempo");
 alert("Bienvenido al Aeropuerto El Dorado");
