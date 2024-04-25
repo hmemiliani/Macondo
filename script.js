@@ -5,31 +5,31 @@ let dineroDisponible = 2500000;
 console.log(`Te llego una consignacion de ${dineroDisponible}`);
 
 console.log("Bienvenido a Bogota");
-while (true){
+while (true) {
     let opcComida = prompt("Que desea comprar: \n\t1. Almojabana \n\t2. Subway\n\t3. Nada \n\nEscoja una opcion:");
 
-    switch(opcComida){
+    switch (opcComida) {
         case "1":
             console.log("Quieres comprar una Almojabana con gaseosa de $15.000COP");
             opcComfirm = confirm("Ten en cuenta que esa Almojabana lleva mucho en el stand, te podria hacer daño... estas seguro que quieres continuar?");
-            if(opcComfirm){
+            if (opcComfirm) {
                 dineroDisponible -= 15000;
                 console.log(`Has comprado una Almojabana con gaseosa, dinero actual ${dineroDisponible}`);
                 break;
-            } else{
+            } else {
                 console.log("Has decidido no comprar esa Almojabana vieja... (bien hecho) quizas quieras otra cosa?");
                 break;
 
             }
-        
+
         case "2":
             console.log("Quieres comprar un Subway en combo de $23.000COP");
             opcComfirm = confirm("Este subway se ve muy bueno, seguramente quedes satisfecho... estas seguro que quieres continuar?");
-            if(opcComfirm){
+            if (opcComfirm) {
                 dineroDisponible -= 23000;
                 console.log(`Has comprado un Subway en combo, dinero actual ${dineroDisponible}`);
                 break;
-            } else{
+            } else {
                 console.log("Has decidido no comprar el Subway en combo... quizas quieras otra cosa?");
                 break;
             }
@@ -38,11 +38,11 @@ while (true){
             if (opcComfirm) {
                 break;
             }
-        
+
         default:
             console.log("Opcion invalida, intentelo nuevamente");
     }
-    if (opcComida=="3" && opcComfirm || dineroDisponible < 2500000) {
+    if (opcComida == "3" && opcComfirm || dineroDisponible < 2500000) {
         break;
     }
 }
@@ -55,12 +55,12 @@ console.log("Atencion, querido cliente, le informamos que su maleta sobrepasa el
 //Medidas Originales
 const altoOriginal = 60;
 const anchoOriginal = 20;
-const largoOriginal =40;
+const largoOriginal = 40;
 
 //Medidas Permitidas
 const altoPermitido = 55;
 const anchoPermitido = 40;
-const largoPermitido =20;
+const largoPermitido = 20;
 
 //Factor de reduccion
 const frAlto = altoPermitido / altoOriginal;
@@ -79,4 +79,19 @@ console.log(`Las nuevas dimensiones de la maleta son:\n\tAlto: ${nuevoAlto}\n\tA
 
 
 //Caso-3 ------------------------------------------------------------
+
+const Binaria = "01110010_01101001_01110111_01101001";
+const contraseñaDecimal = Binaria.split('_').map(binario => parseInt(binario, 2));
+const contraseñaCaracteres = String.fromCharCode(...contraseñaDecimal);
+
+console.log("Contraseña decodificada:", contraseñaCaracteres);
+
+//Caso-4 ------------------------------------------------------------
+
+const hablar = prompt("Digite lo que quiere pedir? quizas decirle a un taxi que te lleve al hotel de las mariposas amarillas??")
+
+const hablarConI = hablar.replace(/[aeouAEOU]/g, 'i');
+
+console.log(`la traduccion de lo que quieres decir es: ${hablarConI}`);
+
 
